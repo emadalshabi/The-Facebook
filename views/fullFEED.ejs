@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <a href="/">Home</a>
+    <div> <h3><%= feed.name %></h3>
+        <p><%= feed.massage %></p>
+        <p><%= feed.created_at %></p></div>
+        <form action="/delete-feed/<%=feed.id %>" method="post">
+            <button>Delete</button>
+        </form>
+        <a href="/update-feed/<%=feed.id %>">Edit</a>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

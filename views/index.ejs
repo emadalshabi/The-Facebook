@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="">
+</head>
+<style>
+
+    body{
+       
+        background-color: aqua;
+        border-color: black;
+    }
+
+        h3 {
+            display: flex;
+            align-content: center;
+
+            border-color: crimson;
+            background-color: rgb(160, 95, 95);
+            
+
+        }
+</style>
+<body>
+    
+    <%- include('new-feed.ejs') %>
+<br>
+    <% for (let i =0 ; i < articles.length; i++) { %>
+        <h3><%= articles[i].name %></h3>
+        <p><%= articles[i].massage.slice(0, 40) %> </p>
+        <a href="/fullFEED/<%= articles[i]._id %>">see more.</a>
+        <p> <%= articles[i].created_at %> </p>
+    <% } %>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
